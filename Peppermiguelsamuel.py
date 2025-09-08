@@ -1,0 +1,181 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import qi
+import argparse
+import sys
+import almath
+import math
+import motion
+import time
+import webbrowser
+import os
+
+session = qi.Session()
+session.connect("tcp://192.168.0.106:9559")
+animated_speech_service = session.service("ALAnimatedSpeech")
+motion_service = session.service("ALMotion")
+tablet_service = session.service("ALTabletService")
+
+a = 1
+while a == 1:
+
+    # Diapositiva 1: Portada
+    tablet_service.showImage("http://198.18.0.1/apps/usta/1.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Innovación: Del Espacio al Cerebro Humano. Minería de Asteroides, Neuroprótesis Inteligentes, Interfaces Cerebro-Computador")
+    time.sleep(1.4)
+
+    # Diapositiva 2: Introducción
+    tablet_service.showImage("http://198.18.0.1/apps/usta/2.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("La humanidad se encuentra en un punto de inflexión, enfrentando retos sin precedentes en la exploración espacial, la salud humana y la tecnología digital.")
+    time.sleep(1.4)
+    animated_speech_service.say("Exploraremos tres campos de vanguardia que redefinen nuestras capacidades y nuestro futuro: Minería de Asteroides, Neuroprótesis Inteligentes e Interfaces Cerebro-Computador")
+    time.sleep(1.4)
+
+    # Diapositiva 3: Minería de Asteroides
+    tablet_service.showImage("http://198.18.0.1/apps/usta/3.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Minería de Asteroides: La Nueva Frontera de Recursos")
+    time.sleep(1.4)
+    animated_speech_service.say("La minería de asteroides representa una visión audaz para asegurar el futuro de la humanidad. Se centra en la extracción de metales preciosos como platino, oro y tierras raras, así como agua, elementos cruciales que escasean en la Tierra.")
+    time.sleep(1.4)
+    animated_speech_service.say("El agua obtenida de asteroides puede convertirse en combustible para cohetes y sustento para tripulaciones en misiones espaciales prolongadas, reduciendo drásticamente los costes de lanzamiento desde la Tierra.")
+    time.sleep(1.4)
+    animated_speech_service.say("Al diversificar las fuentes de recursos, la minería espacial promete mitigar la presión sobre los ecosistemas terrestres.")
+    time.sleep(1.4)
+
+    # Diapositiva 4: Neuroprótesis Inteligentes
+    tablet_service.showImage("http://198.18.0.1/apps/usta/4.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Neuroprótesis Inteligentes: Restaurando Funciones Humanas")
+    time.sleep(1.4)
+    animated_speech_service.say("Las neuroprótesis son dispositivos innovadores diseñados para reemplazar o restaurar funciones nerviosas o motoras perdidas debido a lesiones, enfermedades o amputaciones.")
+    time.sleep(1.4)
+    animated_speech_service.say("Gracias a la integración de la Inteligencia Artificial, estos dispositivos no solo replican movimientos, sino que aprenden y se adaptan a las intenciones del usuario con una fluidez y precisión sin precedentes.")
+    time.sleep(1.4)
+    animated_speech_service.say("Incluyen prótesis de brazo biónico, implantes cocleares que restauran la audición, y estimuladores cerebrales para tratar enfermedades como el Parkinson.")
+    time.sleep(1.4)
+
+    # Diapositiva 5: Software Libre en Salud
+    tablet_service.showImage("http://198.18.0.1/apps/usta/5.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("El Software Libre: Un Catalizador para la Innovación en Salud")
+    time.sleep(1.4)
+    animated_speech_service.say("El software libre juega un papel transformador en el desarrollo de neuroprótesis y tecnologías médicas. Su filosofía de transparencia y colaboración acelera el progreso y democratiza el acceso a la innovación.")
+    time.sleep(1.4)
+    animated_speech_service.say("Facilita que equipos de investigación de todo el mundo compartan código y conocimientos, resolviendo problemas complejos de forma conjunta y más rápida.")
+    time.sleep(1.4)
+    animated_speech_service.say("Al eliminar licencias propietarias, se reduce el coste de investigación y desarrollo, haciendo la tecnología más asequible y accesible para todos.")
+    time.sleep(1.4)
+
+    # Diapositiva 6: Interfaces Cerebro-Computador
+    tablet_service.showImage("http://198.18.0.1/apps/usta/6.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Interfaces Cerebro-Computador: Uniendo Mente y Máquina")
+    time.sleep(1.4)
+    animated_speech_service.say("Las interfaces cerebro-computador establecen un puente directo entre la actividad neuronal del cerebro y dispositivos externos.")
+    time.sleep(1.4)
+    animated_speech_service.say("Lo más fascinante es el desarrollo de sistemas no invasivos, que no requieren cirugía y utilizan sensores externos para capturar las señales cerebrales, como los electroencefalogramas.")
+    time.sleep(1.4)
+    animated_speech_service.say("Permiten controlar dispositivos con la intención mental, ofrecen nuevas vías de comunicación para personas con parálisis, y abren nuevos paradigmas en realidad virtual y gaming.")
+    time.sleep(1.4)
+
+    # Diapositiva 7: Sistemas Digitales en BCI
+    tablet_service.showImage("http://198.18.0.1/apps/usta/7.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Sistemas Digitales en BCI: La Precisión en Tiempo Real")
+    time.sleep(1.4)
+    animated_speech_service.say("La verdadera magia de las BCI reside en los sofisticados sistemas digitales que procesan las complejas señales cerebrales.")
+    time.sleep(1.4)
+    animated_speech_service.say("Estos sistemas realizan un trabajo crítico de filtrado y traducción para convertir el pensamiento en comandos útiles y precisos.")
+    time.sleep(1.4)
+    animated_speech_service.say("Capturan señales con sensores EEG, eliminan ruido con algoritmos avanzados, identifican patrones específicos y convierten patrones cerebrales en acciones digitales en tiempo real.")
+    time.sleep(1.4)
+
+    # Diapositiva 8: Conclusión
+    tablet_service.showImage("http://198.18.0.1/apps/usta/8.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Conclusión: Un Futuro de Posibilidades Infinitas")
+    time.sleep(1.4)
+    animated_speech_service.say("La minería de asteroides nos abre la puerta a una abundancia de recursos más allá de la Tierra, impulsando la exploración y la sostenibilidad a largo plazo.")
+    time.sleep(1.4)
+    animated_speech_service.say("Las neuroprótesis inteligentes, potenciadas por el software libre, prometen una salud más innovadora, personalizada y accesible para todos.")
+    time.sleep(1.4)
+    animated_speech_service.say("Las BCI no invasivas representan la unión más directa entre la mente humana y el mundo digital, desbloqueando nuevas formas de interacción y capacidad.")
+    time.sleep(1.4)
+
+    # Diapositiva 9: Créditos
+    tablet_service.showImage("http://198.18.0.1/apps/usta/9.png")
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1)
+    motion_service.setAngles(["LShoulderPitch","RShoulderPitch"], [0.0, 0.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-1.0, 1.0], 0.5)
+    time.sleep(1.4)
+    motion_service.setAngles(["LElbowRoll","RElbowRoll"], [-0.3, 0.3], 0.5)
+    time.sleep(1)
+    animated_speech_service.say("Exposición realizada por Miguel Caro y Samuel Parra. 2025.")
+    time.sleep(1.4)
+    animated_speech_service.say("Estos tres ejemplos son solo el comienzo de cómo la ciencia y la tecnología están abriendo nuevas fronteras para la humanidad.")
+    time.sleep(1.4)
+    animated_speech_service.say("Forjando un futuro donde lo que antes era ciencia ficción se convierte en nuestra realidad. Gracias por su atención.")
+    time.sleep(1.4)
+
+    a = 0
